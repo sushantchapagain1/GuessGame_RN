@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react';
 import Title from '../components/Title';
 import COLORS from '../constants/colors';
 import AppButton from '../components/AppButton';
+import IonIcon from 'react-native-vector-icons/Ionicons';
 
 function generateRandomNumber(min: number, max: number, exclude: number) {
   const randomNum = Math.floor(Math.random() * (max - min)) + min;
@@ -60,8 +61,12 @@ const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
         <View>
           <Text style={styles.infoText}>Higher or Lower?</Text>
           <View>
-            <AppButton onPress={() => handleNextGuess('lower')}>-</AppButton>
-            <AppButton onPress={() => handleNextGuess('higher')}>+</AppButton>
+            <AppButton onPress={() => handleNextGuess('lower')}>
+              <IonIcon name="remove" size={18} />
+            </AppButton>
+            <AppButton onPress={() => handleNextGuess('higher')}>
+              <IonIcon name="add-outline" size={18} />
+            </AppButton>
           </View>
         </View>
       </View>
@@ -72,7 +77,7 @@ const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
 export default GameScreen;
 
 const styles = StyleSheet.create({
-  infoText: {color: '#fff', textAlign: 'center'},
+  infoText: {color: '#fff', textAlign: 'center', marginBottom: 8},
   guessContainer: {
     borderColor: COLORS.accent500,
     borderWidth: 3,
