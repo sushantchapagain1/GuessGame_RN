@@ -9,14 +9,16 @@ import GameOver from './screens/GameOver';
 const App = () => {
   const [confirmedNumber, setConfirmedNumber] = useState<number | null>();
   const [isGameOver, setIsGameOver] = useState(true);
+  const [numRounds, setNumRounds] = useState(0);
 
   function getConfirmedNumber(confirmed: number) {
     setConfirmedNumber(confirmed);
     setIsGameOver(false);
   }
 
-  function handleGameOver() {
+  function handleGameOver(numRound: number) {
     setIsGameOver(true);
+    setNumRounds(numRound);
   }
 
   function handleResetGame() {
@@ -37,7 +39,7 @@ const App = () => {
     screen = (
       <GameOver
         actualNumber={confirmedNumber}
-        guessNumTimes={0}
+        guessNumTimes={numRounds}
         handleResetGame={handleResetGame}
       />
     );

@@ -18,7 +18,7 @@ function generateRandomNumber(min: number, max: number, exclude: number) {
 
 type GameScreenProps = {
   actualNumber: number;
-  onGameOver: () => void;
+  onGameOver: (numRounds: number) => void;
 };
 
 let minBoundary = 1;
@@ -31,9 +31,9 @@ const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
 
   useEffect(() => {
     if (currentGuess === actualNumber) {
-      onGameOver();
+      onGameOver(guessRounds.length);
     }
-  }, [currentGuess, actualNumber, onGameOver]);
+  }, [currentGuess, actualNumber, onGameOver, guessRounds]);
 
   useEffect(() => {
     minBoundary = 1;
