@@ -7,7 +7,7 @@ import COLORS from './constants/colors';
 import GameOver from './screens/GameOver';
 
 const App = () => {
-  const [confirmedNumber, setConfirmedNumber] = useState<number>();
+  const [confirmedNumber, setConfirmedNumber] = useState<number | null>();
   const [isGameOver, setIsGameOver] = useState(true);
 
   function getConfirmedNumber(confirmed: number) {
@@ -17,6 +17,11 @@ const App = () => {
 
   function handleGameOver() {
     setIsGameOver(true);
+  }
+
+  function handleResetGame() {
+    setIsGameOver(false);
+    setConfirmedNumber(null);
   }
 
   // Not using rn navigation in this app.
@@ -29,7 +34,13 @@ const App = () => {
   }
 
   if (isGameOver && confirmedNumber) {
-    screen = <GameOver />;
+    screen = (
+      <GameOver
+        actualNumber={confirmedNumber}
+        guessNumTimes={0}
+        handleResetGame={handleResetGame}
+      />
+    );
   }
 
   return (

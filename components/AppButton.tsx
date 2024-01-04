@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   btn: {
-    paddingHorizontal: 8,
+    paddingHorizontal: 12,
     paddingVertical: 10,
   },
   btnText: {
     color: '#ffff',
     textAlign: 'center',
+    fontFamily: 'Inter-Bold',
   },
   pressed: {
     opacity: 0.75,

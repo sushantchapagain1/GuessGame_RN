@@ -4,6 +4,8 @@ import Title from '../components/Title';
 import COLORS from '../constants/colors';
 import AppButton from '../components/AppButton';
 import IonIcon from 'react-native-vector-icons/Ionicons';
+import {FlatList} from 'react-native';
+import GuessInfo from '../components/GuessInfo';
 
 function generateRandomNumber(min: number, max: number, exclude: number) {
   const randomNum = Math.floor(Math.random() * (max - min)) + min;
@@ -25,12 +27,18 @@ let maxBoundary = 100;
 const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
   const intialGuess = generateRandomNumber(1, 100, actualNumber);
   const [currentGuess, setCurrentGuess] = useState(intialGuess);
+  const [guessRounds, setGuessRounds] = useState<number[]>([intialGuess]);
 
   useEffect(() => {
     if (currentGuess === actualNumber) {
       onGameOver();
     }
   }, [currentGuess, actualNumber, onGameOver]);
+
+  useEffect(() => {
+    minBoundary = 1;
+    maxBoundary = 100;
+  }, []);
 
   function handleNextGuess(direction: string) {
     if (
@@ -52,6 +60,7 @@ const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
       currentGuess,
     );
     setCurrentGuess(newRandomNumber);
+    setGuessRounds(prev => [...prev, newRandomNumber]);
   }
   return (
     <View>
@@ -69,6 +78,17 @@ const GameScreen = ({actualNumber, onGameOver}: GameScreenProps) => {
             </AppButton>
           </View>
         </View>
+      </View>
+      <View>
+        {/* Flat list will try to find a key and add key property in our data's obj
+        but since there is no obj and no key property we have to tell RN with keyExtractor prop. */}
+        <FlatList
+          data={guessRounds}
+          renderItem={({item, index}) => (
+            <GuessInfo guessNumber={item} roundNumber={index + 1} />
+          )}
+          keyExtractor={item => item.toString()}
+        />
       </View>
     </View>
   );

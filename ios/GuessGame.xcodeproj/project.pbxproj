@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* GuessGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GuessGameTests.m */; };
+		0298620A1B0B42EA95B9229D /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9C31885751D4AC28E2DC6A0 /* Inter-SemiBold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-GuessGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-GuessGame.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3E482602EAB84E078428214D /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E61B2B4A4A134187A2BEEC9F /* Inter-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-GuessGame-GuessGameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-GuessGame-GuessGameTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A1471911F5F34CF182A21E1F /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A73764D0937245BD9D7447D9 /* Inter-Regular.ttf */; };
 		A49B9B172B46AA7A00CD47A7 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = A49B9B162B46AA7A00CD47A7 /* Fonts */; };
+		C75399718C814C79AF935C1C /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDA67FD0A149F5BA768C82 /* Inter-Medium.ttf */; };
+		D3119026114245F9A86C35F1 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCCA453748C34CEB94AE904B /* Inter-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,7 @@
 		00E356EE1AD99517003FC87E /* GuessGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GuessGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessGameTests.m; sourceTree = "<group>"; };
+		0CFDA67FD0A149F5BA768C82 /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GuessGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GuessGame/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = GuessGame/AppDelegate.mm; sourceTree = "<group>"; };
@@ -45,7 +51,11 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GuessGame/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-GuessGame-GuessGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuessGame-GuessGameTests.release.xcconfig"; path = "Target Support Files/Pods-GuessGame-GuessGameTests/Pods-GuessGame-GuessGameTests.release.xcconfig"; sourceTree = "<group>"; };
 		A49B9B162B46AA7A00CD47A7 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
+		A73764D0937245BD9D7447D9 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		C9C31885751D4AC28E2DC6A0 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		E61B2B4A4A134187A2BEEC9F /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FCCA453748C34CEB94AE904B /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B2029F1BFAAB46518C3A2DD0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -138,6 +149,19 @@
 				00E356EE1AD99517003FC87E /* GuessGameTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B2029F1BFAAB46518C3A2DD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA453748C34CEB94AE904B /* Inter-Bold.ttf */,
+				E61B2B4A4A134187A2BEEC9F /* Inter-Light.ttf */,
+				0CFDA67FD0A149F5BA768C82 /* Inter-Medium.ttf */,
+				A73764D0937245BD9D7447D9 /* Inter-Regular.ttf */,
+				C9C31885751D4AC28E2DC6A0 /* Inter-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -247,6 +271,11 @@
 				A49B9B172B46AA7A00CD47A7 /* Fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D3119026114245F9A86C35F1 /* Inter-Bold.ttf in Resources */,
+				3E482602EAB84E078428214D /* Inter-Light.ttf in Resources */,
+				C75399718C814C79AF935C1C /* Inter-Medium.ttf in Resources */,
+				A1471911F5F34CF182A21E1F /* Inter-Regular.ttf in Resources */,
+				0298620A1B0B42EA95B9229D /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +613,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -652,7 +684,10 @@
 					"-DFOLLY_USE_LIBCPP=1",
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

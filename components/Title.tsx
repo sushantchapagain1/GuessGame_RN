@@ -10,7 +10,7 @@ export default Title;
 const styles = StyleSheet.create({
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Inter-Bold',
     color: '#fff',
     borderColor: '#fff',
     borderWidth: 1,
