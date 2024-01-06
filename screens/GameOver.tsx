@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View, Dimensions} from 'react-native';
 import React from 'react';
 import Title from '../components/Title';
 import COLORS from '../constants/colors';
@@ -9,6 +9,8 @@ type GameOverProps = {
   guessNumTimes: number;
   handleResetGame: () => void;
 };
+
+const dimensions = Dimensions.get('window').width;
 
 const GameOver = ({
   actualNumber,
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Inter-Bold',
     fontWeight: '600',
-    fontSize: 16,
+    fontSize: dimensions < 380 ? 16 : 24,
     color: COLORS.primary700,
     textAlign: 'center',
     marginTop: 18,
