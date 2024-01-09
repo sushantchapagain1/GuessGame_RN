@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View, Dimensions} from 'react-native';
+import {Image, StyleSheet, Text, View, useWindowDimensions} from 'react-native';
 import React from 'react';
 import Title from '../components/Title';
 import COLORS from '../constants/colors';
@@ -10,13 +10,19 @@ type GameOverProps = {
   handleResetGame: () => void;
 };
 
-const dimensions = Dimensions.get('window').width;
+// const dimensions = Dimensions.get('window').width;
 
 const GameOver = ({
   actualNumber,
   guessNumTimes,
   handleResetGame,
 }: GameOverProps) => {
+  // later use  react-native-orientation module.
+  const {height, width} = useWindowDimensions();
+  console.log(height, width);
+
+  const isBiggerScreen = width > 500;
+
   return (
     <View style={styles.screenContainer}>
       <Title>GameOver</Title>
@@ -24,7 +30,11 @@ const GameOver = ({
         source={require('../assets/images/success.png')}
         style={styles.img}
       />
-      <Text style={styles.text}>
+      <Text
+        style={[
+          styles.text,
+          isBiggerScreen ? styles.bigScreenText : styles.smallScreenText,
+        ]}>
         Your phone took {guessNumTimes} times to guess {actualNumber} number
       </Text>
       <View style={styles.newBtn}>
@@ -49,10 +59,15 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'Inter-Bold',
     fontWeight: '600',
-    fontSize: dimensions < 380 ? 16 : 24,
     color: COLORS.primary700,
     textAlign: 'center',
     marginTop: 18,
+  },
+  smallScreenText: {
+    fontSize: 24,
+  },
+  bigScreenText: {
+    fontSize: 32,
   },
   newBtn: {
     alignSelf: 'center',

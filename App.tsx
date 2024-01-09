@@ -5,6 +5,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import GameScreen from './screens/GameScreen';
 import COLORS from './constants/colors';
 import GameOver from './screens/GameOver';
+import {StatusBar} from 'react-native';
 
 const App = () => {
   const [confirmedNumber, setConfirmedNumber] = useState<number | null>();
@@ -49,6 +50,14 @@ const App = () => {
     <LinearGradient
       colors={[COLORS.primary600, COLORS.accent500]}
       style={styles.app}>
+      {/* works for andriod only need to use SafeAreaProvider */}
+      <StatusBar
+        barStyle="light-content"
+        hidden={false}
+        backgroundColor="transparent"
+        translucent={true}
+      />
+
       <ImageBackground
         source={require('./assets/images/background.png')}
         resizeMode="cover"
